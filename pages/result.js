@@ -138,13 +138,12 @@ export default class Result extends Component {
     return (
       <Page>
         <h1>Big Five Result</h1>
-        {getInfo().languages.map((lang, index) => <button data-language={lang.id} onClick={this.handleTranslateResume} className={lang.id === this.state.viewLanguage ? 'isActive' : ''} key={index}>{lang.text}</button>)}
         {this.state.resume === false ? <AddResults addResults={this.addResults} /> : null}
         {this.state.resume === false ? <LoadFile handler={this.loadResults} buttonTitle='Upload' /> : null}
+        {this.state.resume !== false ? <button onClick={this.handleSaveResults}>Save results</button> : null}
         {this.state.resume !== false
           ? <Resume data={this.state.resume} width={this.state.chartWidth} />
           : null}
-        {this.state.resume !== false ? <button onClick={this.handleSaveResults}>Save results</button> : null}
         <style jsx>
           {`
             h2 {

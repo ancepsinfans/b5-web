@@ -16,18 +16,8 @@ const Intro = () => {
         <li>Describe yourself as you generally are now, not as you wish to be in the future.</li>
         <li>Your spontaneous answer is usually the most accurate.</li>
       </ul>
-      <p><strong>Select test language</strong></p>
-      <select
-        value={language}
-        onChange={event => setLanguage(event.target.value)}
-      >
-        <option value='' key='first-option'>Choose language</option>
-        {languages.map(lang => (
-          <option value={lang.id} key={lang.id}>{lang.text}</option>
-        ))}
-      </select>
       <div>
-        <button onClick={() => router.push(`/test?language=${language}`)}>Start test</button>
+        <button onClick={() => router.push(`/test?language=en`)}>Start test</button>
       </div>
       <style jsx>
         {`
