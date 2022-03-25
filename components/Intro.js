@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-const { getInfo } = require('@alheimsins/b5-johnson-120-ipip-neo-pi-r')
+const { getInfo } = require('@ancepsinfans/b5-johnson-120-ipip-neo-pi-r')
 
 const Intro = () => {
   const router = useRouter()
