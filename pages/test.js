@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Page from '../components/Page'
 import Item from '../components/Item'
-const { getItems } = require('@alheimsins/b5-johnson-120-ipip-neo-pi-r')
+const { getItems } = require('@ancepsinfans/b5-johnson-120-ipip-neo-pi-r')
 const { pack } = require('jcb64')
 
 const Test = props => {
