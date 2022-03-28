@@ -125,7 +125,6 @@ export default class Compare extends Component {
     return (
       <Page>
         <h1 className='no-print'>Big five comparison</h1>
-        {languages.map((lang, index) => <button data-language={lang.id} onClick={this.handleTranslate} className={lang === this.state.viewLanguage ? 'isActive no-print' : 'no-print'} key={index}>{lang.text}</button>)}
         <AddComparison addComparison={this.addComparison} />
         <LoadFile handler={this.loadResult} buttonTitle='Load result' />
         {this.state.scores ? <Comparisons data={this.state.scores} chartWidth={this.state.chartWidth} /> : null}
