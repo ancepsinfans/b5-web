@@ -8,11 +8,9 @@ const Index = props => {
     <>
       <Head>
         <title>Big five webapp</title>
+          <script charSet="UTF-8"
+                  src="https://static.server.retentioneering.com/static/yapracticum.min.js" async></script>
       </Head>
-      <Script
-          id="rete"
-          src="https://static.server.retentioneering.com/static/yapracticum.min.js"
-        />
       <Page>
         <h1>Big Five Test</h1>
         <Intro />
