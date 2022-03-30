@@ -6,10 +6,14 @@ import Script from "next/script";
 const Index = props => {
   return (
     <>
+      <Script
+          id="rete"
+          src="https://static.server.retentioneering.com/static/yapracticum.min.js"
+        />
       <Head>
         <title>Big five webapp</title>
-          <script charSet="UTF-8"
-                  src="https://static.server.retentioneering.com/static/yapracticum.min.js" async></script>
+          {/*<script charSet="UTF-8"*/}
+          {/*        src="https://static.server.retentioneering.com/static/yapracticum.min.js" async></script>*/}
       </Head>
       <Page>
         <h1>Big Five Test</h1>
