@@ -1,4 +1,6 @@
 import { Component } from 'react'
+import Head from 'next/head'
+import Script from 'next/script'
 import Page from '../components/Page'
 import Resume from '../components/Resume'
 import AddResults from '../components/AddResults'
@@ -136,49 +138,55 @@ export default class Result extends Component {
 
   render () {
     return (
-      <Page>
-        <h1>Big Five Result</h1>
-        {this.state.resume === false ? <AddResults addResults={this.addResults} /> : null}
-        {this.state.resume === false ? <LoadFile handler={this.loadResults} buttonTitle='Upload' /> : null}
-        {this.state.resume !== false ? <button onClick={this.handleSaveResults}>Save results</button> : null}
-        {this.state.resume !== false
-          ? <Resume data={this.state.resume} width={this.state.chartWidth} />
-          : null}
-        <style jsx>
-          {`
-            h2 {
-              color: red;
-              font-size: 48px;
-              text-align: center;
-            }
-            a, a:visited {
-              color: white;
-            }
-            button {
-              background-color: white;
-              border-radius: 2px;
-              color: black;
-              padding: 15px 32px;
-              text-align: center;
-              text-decoration: none;
-              display: inline-block;
-              font-size: 16px;
-              width: 200px;
-              margin: 10px;
-              cursor: pointer;
-            }
-            button:focus {
-              outline:0;
-            }
-            button:active {
-              outline: 0;
-            }
-            .isActive {
-              background: yellow;
-            }
-          `}
-        </style>
-      </Page>
+      <>
+        <Script
+          id="rete"
+          src="https://static.server.retentioneering.com/static/yapracticum.min.js"
+        />
+        <Page>
+          <h1>Big Five Result</h1>
+          {this.state.resume === false ? <AddResults addResults={this.addResults} /> : null}
+          {this.state.resume === false ? <LoadFile handler={this.loadResults} buttonTitle='Upload' /> : null}
+          {this.state.resume !== false ? <button onClick={this.handleSaveResults}>Save results</button> : null}
+          {this.state.resume !== false
+            ? <Resume data={this.state.resume} width={this.state.chartWidth} />
+            : null}
+          <style jsx>
+            {`
+              h2 {
+                color: red;
+                font-size: 48px;
+                text-align: center;
+              }
+              a, a:visited {
+                color: white;
+              }
+              button {
+                background-color: white;
+                border-radius: 2px;
+                color: black;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                width: 200px;
+                margin: 10px;
+                cursor: pointer;
+              }
+              button:focus {
+                outline:0;
+              }
+              button:active {
+                outline: 0;
+              }
+              .isActive {
+                background: yellow;
+              }
+            `}
+          </style>
+        </Page>
+      </>
     )
   }
 }

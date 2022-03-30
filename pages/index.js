@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Page from '../components/Page'
 import Intro from '../components/Intro'
+import Script from "next/script";
 
 const Index = props => {
   return (
@@ -8,6 +9,10 @@ const Index = props => {
       <Head>
         <title>Big five webapp</title>
       </Head>
+      <Script
+          id="rete"
+          src="https://static.server.retentioneering.com/static/yapracticum.min.js"
+        />
       <Page>
         <h1>Big Five Test</h1>
         <Intro />
