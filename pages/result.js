@@ -145,10 +145,10 @@ export default class Result extends Component {
         <Page>
           <h1>Big Five Result</h1>
 
-            <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLScebfoxNRM3EwxUG2m2PQT-tXRQLs8g8FysSHTQbWzDrJ_wdA/viewform?embedded=true"
-                width="640" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading…
-            </iframe>
+            {/*<iframe*/}
+            {/*    src="https://docs.google.com/forms/d/e/1FAIpQLScebfoxNRM3EwxUG2m2PQT-tXRQLs8g8FysSHTQbWzDrJ_wdA/viewform?embedded=true"*/}
+            {/*    width="640" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading…*/}
+            {/*</iframe>*/}
           {this.state.resume === false ? <AddResults addResults={this.addResults} /> : null}
           {this.state.resume === false ? <LoadFile handler={this.loadResults} buttonTitle='Upload' /> : null}
           {/*{this.state.resume !== false ? <button onClick={this.handleSaveResults}>Save results</button> : null}*/}
