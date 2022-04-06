@@ -144,7 +144,7 @@ export default class Result extends Component {
         />
         <Page>
           <h1>Big Five Result</h1>
-
+          <p>Fill in the form under the graph with your results, then you can have a look at your detailed personality report below.</p>
             {/*<iframe*/}
             {/*    src="https://docs.google.com/forms/d/e/1FAIpQLScebfoxNRM3EwxUG2m2PQT-tXRQLs8g8FysSHTQbWzDrJ_wdA/viewform?embedded=true"*/}
             {/*    width="640" height="500" frameBorder="0" marginHeight="0" marginWidth="0">Loading…*/}
